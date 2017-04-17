@@ -1,13 +1,10 @@
 #include<iostream>
 #include<stdlib.h>
 #include <time.h>
-#include <iterator>
-#include <iomanip>
-#include <sstream>
 #include "Ace/Ace.h"
 
 
-//using namespace std;
+using namespace std;
 //
 //int main(int argc, char **argv){
 //    srand (time(NULL));
@@ -35,8 +32,18 @@
 
 int main() {
     Ace ace;
-    convert conv;
-    string enc = ace.encryption("","da08");
-    cout << enc << endl;
-    cout << ace.decryption(enc,"26f8") << endl;
+    srand(time(NULL));
+    for (int i = 0; i < 5; ++i) {
+        string pk = ace.generatePrivKey();
+        string pbk = ace.generatePublicKeyFromPrivKey(pk);
+        cout << "\nRandom Priv key : " << pk;
+        cout << "\n Public key --> : " << pbk<<endl;
+        string enc = ace.encryption
+                ("je suis gallou et je vais devenir madame "
+                         "sapo equilibre avec un equilibriste"
+                         " de renome ", pk);
+        cout << enc << endl;
+        cout << ace.decryption(enc, pbk) << endl;
+    }
+    return 0;
 }

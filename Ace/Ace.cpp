@@ -8,27 +8,31 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
+#include <stdlib.h>
 #include "Ace.h"
+
 
 string Ace::generatePublicKeyFromPrivKey(string privKey) {
     string resultat;
     for (unsigned int i = 0; i < privKey.size(); i+= 2) {
         //get 8 bites or 2 char hexa
         resultat += convertisseur.bin_to_hex(
-                        convertisseur.bin_complement(
-                                convertisseur.hex_to_bin(privKey.substr (i , i + 2))
-                       )
-                 );
+                convertisseur.bin_complement(
+                        convertisseur.hex_to_bin(privKey.substr (i , i + 2))
+                )
+        );
     }
     return resultat;
 }
 
 string Ace::generatePrivKey() {
+
     int randomValue = rand();
     string resultat;
 
     do{
         resultat  = convertisseur.to_hex(randomValue);
+//        cout<<resultat<<endl;
     }while (resultat.size() != 4);
 
     return resultat;
@@ -64,7 +68,8 @@ int Ace::sommeHex(string u, string v) {
 }
 
 string Ace::EncriptPartFile(string partTexte, string partPrivateKey) {
-    return convertisseur.to_hex(sommeHex(partTexte , partPrivateKey) % modulo);
+    string resultat = convertisseur.to_hex(sommeHex(partTexte , partPrivateKey) % modulo);
+    return resultat.size() == 1 ? '0' + resultat : resultat;
 }
 
 string Ace::encryption(string texte, string privateKey) {
@@ -74,7 +79,7 @@ string Ace::encryption(string texte, string privateKey) {
     split(asciiTexte , tabSplit, ' ');
     string resultat, partPrivateKey;
     for (unsigned int i = 0; i < tabSplit.size(); ++i) {
-         partPrivateKey = privateKey.substr(( (i*2 )% privateKey.size()), 2);
+        partPrivateKey = privateKey.substr(( (i*2 )% privateKey.size()), 2);
         resultat += EncriptPartFile(tabSplit.at(i), partPrivateKey);
     }
     return resultat;
