@@ -36,13 +36,13 @@ int main() {
     for (int i = 0; i < 5; ++i) {
         string pk = ace.generatePrivKey();
         string pbk = ace.generatePublicKeyFromPrivKey(pk);
-        cout << "\nRandom Priv key : " << pk;
-        cout << "\n Public key --> : " << pbk<<endl;
+        cout << "\nRandom Priv key : " << pk<<endl;
         string enc = ace.encryption
                 ("je suis gallou et je vais devenir madame "
                          "sapo equilibre avec un equilibriste"
-                         " de renome ", pk);
+                         " de renomer haha ", pk);
         cout << enc << endl;
+        cout << "Public key --> : " << pbk<<endl;
         cout << ace.decryption(enc, pbk) << endl;
     }
     return 0;
