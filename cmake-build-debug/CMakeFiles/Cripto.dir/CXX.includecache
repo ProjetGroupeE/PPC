@@ -29,6 +29,8 @@ vector
 -
 stdlib.h
 -
+time.h
+-
 convert.h
 C:/Users/DIALLO/ClionProjects/Cripto/Ace/convert.h
 
@@ -52,10 +54,6 @@ array
 
 C:/Users/DIALLO/ClionProjects/Cripto/main.cpp
 iostream
--
-stdlib.h
--
-time.h
 -
 Ace/Ace.h
 C:/Users/DIALLO/ClionProjects/Cripto/Ace/Ace.h

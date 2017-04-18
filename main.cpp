@@ -1,6 +1,4 @@
 #include<iostream>
-#include<stdlib.h>
-#include <time.h>
 #include "Ace/Ace.h"
 
 
@@ -31,7 +29,7 @@ using namespace std;
 
 
 int main() {
-    srand(time(NULL));
+
     Ace ace;
 
     for (int i = 0; i < 30; ++i) {

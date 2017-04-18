@@ -7,6 +7,7 @@
 
 #include <vector>
 #include <stdlib.h>
+#include <time.h>
 #include "convert.h"
 
 const unsigned maxBits = 32;
@@ -17,11 +18,14 @@ protected:
     convert convertisseur;
 
 public:
+    Ace(){
+        srand(time(NULL));
+    }
+
     string generatePrivKey();
     string generatePublicKeyFromPrivKey(string privKey);
     string encryption(string,string);
     string decryption(string,string);
-
 private:
 //    string sommeHex(string,string);
     int sommeHex(string,string);
