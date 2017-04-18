@@ -6,6 +6,7 @@
 #define CRIPTO_ACE_H
 
 #include <vector>
+#include <stdlib.h>
 #include "convert.h"
 
 const unsigned maxBits = 32;

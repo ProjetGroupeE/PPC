@@ -8,7 +8,7 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
-#include <stdlib.h>
+#include <algorithm>
 #include "Ace.h"
 
 
@@ -22,17 +22,19 @@ string Ace::generatePublicKeyFromPrivKey(string privKey) {
                 )
         );
     }
+    transform(resultat.begin(), resultat.end(), resultat.begin(), ::toupper);
     return resultat;
 }
 
 string Ace::generatePrivKey() {
 
-    int randomValue = rand();
+    const char *hex_digits = "0123456789ABCDEF";
+//    int randomValue = rand()+;
     string resultat;
 
     do{
-        resultat  = convertisseur.to_hex(randomValue);
-//        cout<<resultat<<endl;
+//        resultat  = convertisseur.to_hex(randomValue);
+        resultat  += hex_digits[ ( rand() % 16 ) ];
     }while (resultat.size() != 4);
 
     return resultat;
@@ -73,6 +75,7 @@ string Ace::EncriptPartFile(string partTexte, string partPrivateKey) {
 }
 
 string Ace::encryption(string texte, string privateKey) {
+
     vector<std::string> tabSplit;
 
     string asciiTexte = transformeTexteToAsciiHex(texte, " ");
@@ -86,6 +89,7 @@ string Ace::encryption(string texte, string privateKey) {
 }
 
 string Ace::decryption(string texte, string publicKey) {
+
     string resultat, partPublicKey;
     for (unsigned int i = 0, j=0; j < texte.size(); ++i,j+=2) {
         partPublicKey = publicKey.substr(( (i*2 )% publicKey.size()), 2);

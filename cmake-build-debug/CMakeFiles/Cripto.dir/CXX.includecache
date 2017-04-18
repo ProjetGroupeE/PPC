@@ -19,13 +19,15 @@ iterator
 -
 vector
 -
-stdlib.h
+algorithm
 -
 Ace.h
 C:/Users/DIALLO/ClionProjects/Cripto/Ace/Ace.h
 
 C:/Users/DIALLO/ClionProjects/Cripto/Ace/Ace.h
 vector
+-
+stdlib.h
 -
 convert.h
 C:/Users/DIALLO/ClionProjects/Cripto/Ace/convert.h

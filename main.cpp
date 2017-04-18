@@ -31,9 +31,10 @@ using namespace std;
 
 
 int main() {
-    Ace ace;
     srand(time(NULL));
-    for (int i = 0; i < 5; ++i) {
+    Ace ace;
+
+    for (int i = 0; i < 30; ++i) {
         string pk = ace.generatePrivKey();
         string pbk = ace.generatePublicKeyFromPrivKey(pk);
         cout << "\nRandom Priv key : " << pk<<endl;
