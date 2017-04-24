@@ -1,0 +1,9 @@
+﻿  Signature.cpp
+c:\users\diallo\documents\visual studio 2015\projects\signature\signature\signature.h(46): warning C4091: '__declspec(dllexport)': ignored on left of 'Signature' when no variable is declared
+c:\users\diallo\documents\visual studio 2015\projects\signature\signature\signature.h(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\diallo\documents\visual studio 2015\projects\signature\signature\signature.cpp(79): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  Utiles.cpp
+  Signature.vcxproj -> c:\users\diallo\documents\visual studio 2015\Projects\Signature\Debug\Signature.dll
+  Signature.vcxproj -> c:\users\diallo\documents\visual studio 2015\Projects\Signature\Debug\Signature.pdb (Full PDB)
