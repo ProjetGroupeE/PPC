@@ -1,9 +1,13 @@
-﻿  Signature.cpp
+﻿  Utiles.cpp
+c:\users\diallo\documents\visual studio 2015\projects\signature\signature\signature.h(46): warning C4091: '__declspec(dllexport)': ignored on left of 'Signature' when no variable is declared
+c:\users\diallo\documents\visual studio 2015\projects\signature\signature\signature.h(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\diallo\documents\visual studio 2015\projects\signature\signature\utiles.cpp(62): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  Signature.cpp
 c:\users\diallo\documents\visual studio 2015\projects\signature\signature\signature.h(46): warning C4091: '__declspec(dllexport)': ignored on left of 'Signature' when no variable is declared
 c:\users\diallo\documents\visual studio 2015\projects\signature\signature\signature.h(28): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 c:\users\diallo\documents\visual studio 2015\projects\signature\signature\signature.cpp(79): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
-  Skipping... (no relevant changes detected)
-  Utiles.cpp
-  Signature.vcxproj -> c:\users\diallo\documents\visual studio 2015\Projects\Signature\Debug\Signature.dll
-  Signature.vcxproj -> c:\users\diallo\documents\visual studio 2015\Projects\Signature\Debug\Signature.pdb (Full PDB)
+  LINK : C:\Users\DIALLO\Documents\Visual Studio 2015\Projects\Signature\Debug\Signature.dll not found or not built by the last incremental link; performing full link
+     Creating library C:\Users\DIALLO\Documents\Visual Studio 2015\Projects\Signature\Debug\Signature.lib and object C:\Users\DIALLO\Documents\Visual Studio 2015\Projects\Signature\Debug\Signature.exp
+  Signature.vcxproj -> C:\Users\DIALLO\Documents\Visual Studio 2015\Projects\Signature\Debug\Signature.dll
+  Signature.vcxproj -> C:\Users\DIALLO\Documents\Visual Studio 2015\Projects\Signature\Debug\Signature.pdb (Full PDB)

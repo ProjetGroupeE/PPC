@@ -29,9 +29,9 @@ public:
 	}
 
 
-	bool generate(string& privateKey, string& publickey);
-	string sign(string data, string privKey);
-	bool verify(string data, string signature, string pubKey);
+	SIGNATURE_INTERFACE bool generate(string& privateKey, string& publickey);
+	SIGNATURE_INTERFACE string sign(string data, string privKey);
+	SIGNATURE_INTERFACE bool verify(string data, string signature, string pubKey);
 
 private:
 	string generatePrivKey();
